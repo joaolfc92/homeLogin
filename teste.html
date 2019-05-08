@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<meta charset="utf-8">
+	<style>
+
+	body{
+		background:linear-gradient(to top,#6d3880, #e97992, #605b83);
+		height: 555px;
+	}	
+
+	.container{
+		height: 450px;
+		width: 450px;
+		background-color: transparent;
+		top:50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		position: absolute;
+		
+	}	
+
+	h2{
+		margin-top: 100px;
+		text-align: center;
+		color: white;
+		font-size: 30px;
+		font-weight: normal;
+		font-family: gadugi;
+
+
+
+	}
+
+	.formulario{
+		
+		height: 182px;
+		width: 267px;
+		margin-top: 55px;
+		margin-left: 90px;
+
+
+	}
+
+	input{
+		display: block;
+		height: 50px;
+		width: 265px;
+		text-align: center;
+		color: white;
+		background-color: rgba(197,191,193,0.25);
+		font-size: 18px;
+		font-family: gadugi;
+		border:1px solid #ccc;
+
+
+	}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
+	#senha{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	button{
+		height: 50px;
+		width: 267px;
+		text-align: center;
+		color: white;
+		background-color: rgba(197,191,193,0.25);
+		font-size: 18px;
+		font-family: gadugi;
+		border:1px solid #ccc;
+	}
+
+	
+
+
+		
+
+
+	</style>
+	
+	
+</head>
+<body>
+
+	<div class="container">
+		<h2>Member Login</h2>
+
+		<div class="formulario">
+			<form name="form" id="form">
+				<input type="text" name="username" id="username" placeholder="Username">
+				<input type="password" name="senha" id="senha" placeholder="Password" required>
+				<button onclick="enviar()">Login</button>
+			</form>
+
+		</div>
+	</div>
+
+	<script>
+		function enviar(){
+			var email = document.getElementById("form").elements[0].value;
+			var senha = document.getElementById("form").elements[1].value;
+			var quebra = "\n"
+			
+			var dt = new Date ();
+				var sem = dt.getDay();
+				var dia = dt.getDate();
+				var mes = dt.getMonth();
+				var ano = dt.getFullYear();
+				var hora = dt.getHours();
+				var min = dt.getMinutes();
+				var seg = dt.getSeconds();
+
+			var semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
+			var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+
+
+			alert("Seja bem vindo!!! "+quebra
+					+email+quebra
+					+senha+quebra
+					+semana[sem]+" "+dia+" "+meses[mes]+" "+ano+quebra
+					+hora+" "+"horas "+min+" "+"minutos "+seg+" "+"segundos");
+
+		}
+
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+</body>
+</html>
